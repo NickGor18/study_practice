@@ -1,0 +1,20 @@
+<div>
+  <div *ngFor="let event of events" class="well hoverwell thumbnail">
+    <h2>{{event.name}}</h2>
+    <ng-container [ngSwitch]="event.format">
+      <span class="label label-warning" *ngSwitchCase="'InPerson'">In-Person</span>
+      <span class="label label-warning" *ngSwitchCase="'Online'">Online</span>
+      <span class="label label-warning" *ngSwitchCase="'TBD'">TBD</span>
+    </ng-container>
+    <div>Date: {{event.date}}</div>
+    <div>Time: {{event.time}}</div>
+    <div *ngIf="event.location">
+      <span>Location: {{event?.location?.address}}</span>
+      <span class="pad-left">{{event?.location?.city}}, {{event?.location?.country}}</span>
+    </div>
+    <div *ngIf="event.onlineUrl">
+      Online URL: {{event?.onlineUrl}}
+    </div>
+  </div>
+
+</div>
