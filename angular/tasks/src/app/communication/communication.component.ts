@@ -6,4 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./communication.component.css']
 })
 export class CommunicationComponent {
+  stop = false
+  currentCounter!: number
 }

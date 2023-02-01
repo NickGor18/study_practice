@@ -14,6 +14,11 @@ import { FourthTaskComponent } from './communication/fourth-task/fourth-task.com
 import { FifthTaskComponent } from './communication/fifth-task/fifth-task.component';
 import { SixthTaskComponent } from './communication/sixth-task/sixth-task.component';
 import { SeventhTaskComponent } from './communication/seventh-task/seventh-task.component';
+import { EighthTaskComponent } from './communication/eighth-task/eighth-task.component';
+import { NineghtTaskComponent } from './communication/nineght-task/nineght-task.component';
+import { TenthTaskComponent } from './communication/tenth-task/tenth-task.component';
+import { EleventhTaskComponent } from './communication/eleventh-task/eleventh-task.component';
+import { TwelweTaskComponent } from './communication/twelwe-task/twelwe-task.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +32,11 @@ import { SeventhTaskComponent } from './communication/seventh-task/seventh-task.
     FifthTaskComponent,
     SixthTaskComponent,
     SeventhTaskComponent,
+    EighthTaskComponent,
+    NineghtTaskComponent,
+    TenthTaskComponent,
+    EleventhTaskComponent,
+    TwelweTaskComponent,
   ],
   imports: [
     BrowserModule,
