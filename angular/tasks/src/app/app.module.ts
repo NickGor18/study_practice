@@ -19,6 +19,12 @@ import { NineghtTaskComponent } from './communication/nineght-task/nineght-task.
 import { TenthTaskComponent } from './communication/tenth-task/tenth-task.component';
 import { EleventhTaskComponent } from './communication/eleventh-task/eleventh-task.component';
 import { TwelweTaskComponent } from './communication/twelwe-task/twelwe-task.component';
+import { SecondModuleComponent } from './second-module/second-module.component';
+import { FirstTask2Component } from "./second-module/sm-first-task/first-task.component";
+import { SmSecondTaskComponent } from './second-module/sm-second-task/sm-second-task.component';
+import { EventDetailsComponent } from './second-module/sm-second-task/event-details/event-details.component';
+import { SmThirdTaskComponent } from './second-module/sm-third-task/sm-third-task.component';
+import {ResolverService} from "./second-module/sm-third-task/resolver.service";
 
 @NgModule({
   declarations: [
@@ -37,6 +43,11 @@ import { TwelweTaskComponent } from './communication/twelwe-task/twelwe-task.com
     TenthTaskComponent,
     EleventhTaskComponent,
     TwelweTaskComponent,
+    SecondModuleComponent,
+    FirstTask2Component,
+    SmSecondTaskComponent,
+    EventDetailsComponent,
+    SmThirdTaskComponent,
   ],
   imports: [
     BrowserModule,
@@ -44,7 +55,7 @@ import { TwelweTaskComponent } from './communication/twelwe-task/twelwe-task.com
     MatButtonModule,
     MatButtonToggleModule
   ],
-  providers: [],
+  providers: [ResolverService, ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
