@@ -25,6 +25,16 @@ import { SmSecondTaskComponent } from './second-module/sm-second-task/sm-second-
 import { EventDetailsComponent } from './second-module/sm-second-task/event-details/event-details.component';
 import { SmThirdTaskComponent } from './second-module/sm-third-task/sm-third-task.component';
 import {ResolverService} from "./second-module/sm-third-task/resolver.service";
+import { FormComponent } from './form/form.component';
+import { FormFirstTaskComponent } from './form/form-first-task/form-first-task.component';
+import { CreateComponent } from './form/form-first-task/create/create.component';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { FormSecondTaskComponent } from './form/form-second-task/form-second-task.component';
+import { FormThirdTaskComponent } from './form/form-third-task/form-third-task.component';
+import { CreateReactiveComponent } from './form/form-third-task/create-reactive/create-reactive.component';
+import { ContentProjectionComponent } from './content-projection/content-projection.component';
+import { ClosableComponent } from './content-projection/closable/closable.component';
+import { MultiClosableComponent } from './content-projection/multi-closable/multi-closable.component';
 
 @NgModule({
   declarations: [
@@ -48,13 +58,24 @@ import {ResolverService} from "./second-module/sm-third-task/resolver.service";
     SmSecondTaskComponent,
     EventDetailsComponent,
     SmThirdTaskComponent,
+    FormComponent,
+    FormFirstTaskComponent,
+    CreateComponent,
+    FormSecondTaskComponent,
+    FormThirdTaskComponent,
+    CreateReactiveComponent,
+    ContentProjectionComponent,
+    ClosableComponent,
+    MultiClosableComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    MatButtonModule,
-    MatButtonToggleModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        MatButtonModule,
+        MatButtonToggleModule,
+        FormsModule,
+        ReactiveFormsModule
+    ],
   providers: [ResolverService, ],
   bootstrap: [AppComponent]
 })

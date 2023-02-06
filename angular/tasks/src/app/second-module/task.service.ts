@@ -8,6 +8,8 @@ export class TaskService {
   constructor() {
   }
 
+  lastId: number = 4
+
   events = [
     {
       id: 1,
@@ -42,6 +44,14 @@ export class TaskService {
       reviewed: false
     },
   ]
+
+  saveEvent(event: {name: string, date: string, time: string, location: {address: string, city: string, country: string}}) {
+    this.events.push({
+      ...event,
+      id: this.lastId + 1,
+      reviewed: false
+    })
+  }
 
   getEvent(eventId: number) {
     return this.events.find(event => event.id == eventId)

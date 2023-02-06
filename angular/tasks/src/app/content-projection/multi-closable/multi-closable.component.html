@@ -1,0 +1,11 @@
+<div class="well">
+  <div [ngStyle]="{'border': '1px solid red'}">
+    <ng-content select=".slot1"></ng-content>
+  </div>
+  <div [ngStyle]="{'border': '1px solid green'}">
+    <ng-content select=".slot2"></ng-content>
+  </div>
+  <div [ngStyle]="{'border': '1px solid blue'}">
+    <ng-content select=".slot3"></ng-content>
+  </div>
+</div>

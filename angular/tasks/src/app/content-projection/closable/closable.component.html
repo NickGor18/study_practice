@@ -1,0 +1,4 @@
+<div class="well" *ngIf="visible">
+  <ng-content></ng-content>
+</div>
+<button class="btn btn-primary" (click)="visible = !visible">Toggle</button>
