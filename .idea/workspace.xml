@@ -1,83 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f90f1de4-862d-41b2-b39a-cbc6e3ff1250" name="Changes" comment="second module">
-      <change afterPath="$PROJECT_DIR$/angular/tasks/src/app/advanced-components/advanced-components.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular/tasks/src/app/advanced-components/advanced-components.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular/tasks/src/app/advanced-components/advanced-components.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular/tasks/src/app/advanced-components/create-directive/create-directive.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular/tasks/src/app/advanced-components/create-directive/create-directive.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular/tasks/src/app/advanced-components/create-directive/create-directive.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular/tasks/src/app/advanced-components/create-directive/hide.directive.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular/tasks/src/app/advanced-components/same-component-routing/same-component-routing.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular/tasks/src/app/advanced-components/same-component-routing/same-component-routing.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular/tasks/src/app/advanced-components/same-component-routing/same-component-routing.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular/tasks/src/app/advanced-components/view-child/view-child.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular/tasks/src/app/advanced-components/view-child/view-child.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular/tasks/src/app/advanced-components/view-child/view-child.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular/tasks/src/app/injection/inject-decorator/calcPrime.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular/tasks/src/app/injection/inject-decorator/calcPrime.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular/tasks/src/app/injection/inject-decorator/inject-decorator.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular/tasks/src/app/injection/inject-decorator/inject-decorator.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular/tasks/src/app/injection/inject-decorator/inject-decorator.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular/tasks/src/app/injection/injection.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular/tasks/src/app/injection/injection.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular/tasks/src/app/injection/injection.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular/tasks/src/app/injection/use-existing/logger.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular/tasks/src/app/injection/use-existing/simple-logger.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular/tasks/src/app/injection/use-existing/use-existing.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular/tasks/src/app/injection/use-existing/use-existing.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular/tasks/src/app/injection/use-existing/use-existing.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular/tasks/src/app/integrated-test.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular/tasks/src/app/pipes/custom-pipe/custom-pipe.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular/tasks/src/app/pipes/custom-pipe/custom-pipe.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular/tasks/src/app/pipes/custom-pipe/custom-pipe.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular/tasks/src/app/pipes/custom-pipe/transform-pipe.pipe.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular/tasks/src/app/pipes/filter-with-ng-on-changes/filter-with-ng-on-changes.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular/tasks/src/app/pipes/filter-with-ng-on-changes/filter-with-ng-on-changes.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular/tasks/src/app/pipes/filter-with-ng-on-changes/filter-with-ng-on-changes.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular/tasks/src/app/pipes/filter-with-ng-on-changes/filtered/filtered.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular/tasks/src/app/pipes/filter-with-ng-on-changes/filtered/filtered.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular/tasks/src/app/pipes/filter-with-ng-on-changes/filtered/filtered.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular/tasks/src/app/pipes/filter/filter.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular/tasks/src/app/pipes/filter/filter.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular/tasks/src/app/pipes/filter/filter.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular/tasks/src/app/pipes/pipe-lower-case/pipe-lower-case.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular/tasks/src/app/pipes/pipe-lower-case/pipe-lower-case.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular/tasks/src/app/pipes/pipe-lower-case/pipe-lower-case.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular/tasks/src/app/pipes/pipe-with-parameters/pipe-with-parameters.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular/tasks/src/app/pipes/pipe-with-parameters/pipe-with-parameters.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular/tasks/src/app/pipes/pipe-with-parameters/pipe-with-parameters.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular/tasks/src/app/pipes/pipes.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular/tasks/src/app/pipes/pipes.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular/tasks/src/app/pipes/pipes.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular/tasks/src/app/pipes/sort/sort.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular/tasks/src/app/pipes/sort/sort.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular/tasks/src/app/pipes/sort/sort.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular/tasks/src/app/server-communication/http-get-request-with-params/http-get-request-with-params.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular/tasks/src/app/server-communication/http-get-request-with-params/http-get-request-with-params.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular/tasks/src/app/server-communication/http-get-request-with-params/http-get-request-with-params.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular/tasks/src/app/server-communication/http-get-request/http-get-request.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular/tasks/src/app/server-communication/http-get-request/http-get-request.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular/tasks/src/app/server-communication/http-get-request/http-get-request.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular/tasks/src/app/server-communication/observable-to-promise/observable-to-promise.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular/tasks/src/app/server-communication/observable-to-promise/observable-to-promise.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular/tasks/src/app/server-communication/observable-to-promise/observable-to-promise.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular/tasks/src/app/server-communication/server-communication.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular/tasks/src/app/server-communication/server-communication.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular/tasks/src/app/server-communication/server-communication.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular/tasks/src/app/test-data/actor.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular/tasks/src/app/test-data/movie-http.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular/tasks/src/app/test-data/test-data.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular/tasks/src/app/test-data/test-data.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular/tasks/src/app/test-data/test-data.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular/tasks/src/app/test-data/test-data.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular/tasks/src/app/test.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular/tasks/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/angular/tasks/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular/tasks/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/angular/tasks/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular/tasks/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/angular/tasks/src/app/app.module.ts" afterDir="false" />
-    </list>
+    <list default="true" id="f90f1de4-862d-41b2-b39a-cbc6e3ff1250" name="Changes" comment="last module" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -162,7 +86,7 @@
       <workItem from="1675850061462" duration="4275000" />
       <workItem from="1675937344918" duration="5747000" />
       <workItem from="1676023947220" duration="7610000" />
-      <workItem from="1676236400522" duration="594000" />
+      <workItem from="1676236400522" duration="1467000" />
     </task>
     <task id="LOCAL-00001" summary="first module">
       <created>1675160247763</created>
@@ -199,7 +123,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675678417389</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="last module">
+      <created>1676278457554</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1676278457554</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -222,6 +153,7 @@
     <MESSAGE value="first module" />
     <MESSAGE value="first module +" />
     <MESSAGE value="second module" />
-    <option name="LAST_COMMIT_MESSAGE" value="second module" />
+    <MESSAGE value="last module" />
+    <option name="LAST_COMMIT_MESSAGE" value="last module" />
   </component>
 </project>
