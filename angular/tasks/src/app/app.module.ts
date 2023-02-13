@@ -35,6 +35,31 @@ import { CreateReactiveComponent } from './form/form-third-task/create-reactive/
 import { ContentProjectionComponent } from './content-projection/content-projection.component';
 import { ClosableComponent } from './content-projection/closable/closable.component';
 import { MultiClosableComponent } from './content-projection/multi-closable/multi-closable.component';
+import { PipesComponent } from './pipes/pipes.component';
+import { PipeLowerCaseComponent } from './pipes/pipe-lower-case/pipe-lower-case.component';
+import { PipeWithParametersComponent } from './pipes/pipe-with-parameters/pipe-with-parameters.component';
+import { CustomPipeComponent } from './pipes/custom-pipe/custom-pipe.component';
+import { TransformPipePipe } from './pipes/custom-pipe/transform-pipe.pipe';
+import { FilterWithNgOnChangesComponent } from './pipes/filter-with-ng-on-changes/filter-with-ng-on-changes.component';
+import { FilteredComponent } from "./pipes/filter-with-ng-on-changes/filtered/filtered.component";
+import { FilterComponent } from './pipes/filter/filter.component';
+import { SortComponent } from './pipes/sort/sort.component';
+import { InjectionComponent } from './injection/injection.component';
+import { InjectDecoratorComponent } from './injection/inject-decorator/inject-decorator.component';
+import { UseExistingComponent } from './injection/use-existing/use-existing.component';
+import {LoggerService} from "./injection/use-existing/logger.service";
+import {SimpleLoggerService} from "./injection/use-existing/simple-logger.service";
+import { ServerCommunicationComponent } from './server-communication/server-communication.component';
+import { AdvancedComponentsComponent } from './advanced-components/advanced-components.component';
+import { CreateDirectiveComponent } from './advanced-components/create-directive/create-directive.component';
+import { HideDirective } from './advanced-components/create-directive/hide.directive';
+import { SameComponentRoutingComponent } from './advanced-components/same-component-routing/same-component-routing.component';
+import { ViewChildComponent } from './advanced-components/view-child/view-child.component';
+import { ObservableToPromiseComponent } from './server-communication/observable-to-promise/observable-to-promise.component';
+import { HttpGetRequestComponent } from './server-communication/http-get-request/http-get-request.component';
+import {HttpClientModule} from "@angular/common/http";
+import { HttpGetRequestWithParamsComponent } from './server-communication/http-get-request-with-params/http-get-request-with-params.component';
+import { TestDataComponent } from './test-data/test-data.component';
 
 @NgModule({
   declarations: [
@@ -67,6 +92,28 @@ import { MultiClosableComponent } from './content-projection/multi-closable/mult
     ContentProjectionComponent,
     ClosableComponent,
     MultiClosableComponent,
+    PipesComponent,
+    PipeLowerCaseComponent,
+    PipeWithParametersComponent,
+    CustomPipeComponent,
+    TransformPipePipe,
+    FilterWithNgOnChangesComponent,
+    FilteredComponent,
+    FilterComponent,
+    SortComponent,
+    InjectionComponent,
+    InjectDecoratorComponent,
+    UseExistingComponent,
+    ServerCommunicationComponent,
+    AdvancedComponentsComponent,
+    CreateDirectiveComponent,
+    HideDirective,
+    SameComponentRoutingComponent,
+    ViewChildComponent,
+    ObservableToPromiseComponent,
+    HttpGetRequestComponent,
+    HttpGetRequestWithParamsComponent,
+    TestDataComponent,
   ],
     imports: [
         BrowserModule,
@@ -74,9 +121,10 @@ import { MultiClosableComponent } from './content-projection/multi-closable/mult
         MatButtonModule,
         MatButtonToggleModule,
         FormsModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        HttpClientModule
     ],
-  providers: [ResolverService, ],
+  providers: [ResolverService, LoggerService, {provide: SimpleLoggerService, useExisting: LoggerService}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

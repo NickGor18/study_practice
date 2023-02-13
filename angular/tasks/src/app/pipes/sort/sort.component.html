@@ -1,0 +1,9 @@
+<div>
+  <h1>My Favorite Movies</h1>
+  <div *ngFor="let movie of movies">
+    {{movie.name}} - {{movie.rating}}
+  </div>
+  <div>&nbsp;</div>
+  <button class="btn btn-primary" (click)="sortAsc()">By Rating Ascending</button>
+  <button class="btn btn-primary" (click)="sortDesc()">By Rating Descending</button>
+</div>

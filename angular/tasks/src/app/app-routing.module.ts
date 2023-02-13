@@ -9,6 +9,13 @@ import {FormComponent} from "./form/form.component";
 import {CreateComponent} from "./form/form-first-task/create/create.component";
 import {CreateReactiveComponent} from "./form/form-third-task/create-reactive/create-reactive.component";
 import {ContentProjectionComponent} from "./content-projection/content-projection.component";
+import {PipesComponent} from "./pipes/pipes.component";
+import {InjectionComponent} from "./injection/injection.component";
+import {ServerCommunicationComponent} from "./server-communication/server-communication.component";
+import {AdvancedComponentsComponent} from "./advanced-components/advanced-components.component";
+import {
+  SameComponentRoutingComponent
+} from "./advanced-components/same-component-routing/same-component-routing.component";
 
 const routes: Routes = [
   {
@@ -34,7 +41,23 @@ const routes: Routes = [
   },
   {
     path: 'projection', component: ContentProjectionComponent
+  },
+  {
+    path: 'pipes', component: PipesComponent
+  },
+  {
+    path: 'injection', component: InjectionComponent
+  },
+  {
+    path: 'server', component: ServerCommunicationComponent
+  },
+  {
+    path: 'advanced', component: AdvancedComponentsComponent
+  },
+  {
+    path: 'advanced/:id', component: SameComponentRoutingComponent
   }
+
 ];
 
 @NgModule({
