@@ -1,5 +1,17 @@
 import { Observable, of, from, fromEvent, generate, pairs, EMPTY, concat, timer, zip, range, bindCallback, bindNodeCallback, fromEventPattern, interval, NEVER, throwError, defer } from "rxjs";
-import { map, take, tap, switchMap, filter, reduce, catchError, delay, concatMap, withLatestFrom } from "rxjs/operators";
+import {
+    map,
+    take,
+    tap,
+    switchMap,
+    filter,
+    reduce,
+    catchError,
+    delay,
+    concatMap,
+    withLatestFrom,
+    pluck
+} from "rxjs/operators";
 import { fromFetch } from "rxjs/fetch";
 import { ajax } from "rxjs/ajax";
 import { addItem, run } from './../03-utils';
@@ -59,7 +71,8 @@ import { addItem, run } from './../03-utils';
 // Implement the body of a function that takes id of the button and 
 // creates an Observable that emits the values of the click time on the button
 (function task3(buttonId: string): void {
-    //const stream$ = fromEvent(document.getElementById(buttonId), 'click')
+    // const stream$ = fromEvent(document.getElementById(buttonId), 'click')
+    //     .pipe(pluck('timestamp'))
     
     // run(stream$);
 })('runBtn');
@@ -86,7 +99,11 @@ import { addItem, run } from './../03-utils';
 
     const foo = new С1();
 
-    // const stream$ = fromEventPattern(foo.emit)
+    function addHandler(handler) {
+        foo.registerListener(handler)
+    }
+
+    //const stream$ = fromEventPattern(addHandler)
     //
     // run(stream$);
 
@@ -127,33 +144,46 @@ import { addItem, run } from './../03-utils';
 // const fields$ = from(['name', 'email']);
 // Use operators: ajax('http://jsonplaceholder.typicode.com/users'), switchMap(), map(), withLatestFrom()
 (function task6() {
-    const fields$ = of(['name', 'email']);
+    const fields$ = from(['name', 'email']);
     const stream$ = ajax({url: 'http://jsonplaceholder.typicode.com/users', method: 'GET', responseType: "json"})
 
     // const combineStream$ = stream$
     //     .pipe(
-    //         switchMap((users) => {
-    //             let resp = users.response as Array<any>
+    //         pluck('response'),
+    //         map((users) => {
+    //             let resp = users as Array<any>
     //             resp = resp.map(elem => {
     //                 return {
     //                     name: elem.name,
     //                     email: elem.email
     //                 }
     //             })
-    //             return of(resp)
+    //             return resp
     //         }),
-    //         withLatestFrom(fields$),
+    //         withLatestFrom(fields$.pipe(reduce((acc, elem) => {
+    //             acc.push(elem)
+    //             return acc
+    //         }, []))),
     //         map(([users, fields]) => {
-    //             fields.forEach(field => {
+    //             fields.forEach((field, i) => {
     //                 users.sort((a, b) => {
-    //                     if (a[field] > b[field]) return 1
-    //                     if (a[field] < b[field]) return -1
-    //                     return 0
+    //                     if(i === 0) {
+    //                         if (a[field] > b[field]) return 1
+    //                         if (a[field] < b[field]) return -1
+    //                         return 0
+    //                     } else {
+    //                         if (a[field[i-1]] === b[field[i-1]]) {
+    //                             if (a[field] > b[field]) return 1
+    //                             if (a[field] < b[field]) return -1
+    //                             return 0
+    //                         }
+    //                     }
     //                 })
     //             })
     //             console.log(users)
     //             return users
-    //         })
+    //         }),
+    //         switchMap(arr => from(arr))
     // )
     //
     // run(combineStream$);
@@ -171,10 +201,11 @@ import { addItem, run } from './../03-utils';
     //     .pipe(
     //         switchMap(() => ajax({url: 'http://jsonplaceholder.typicode.com/users', method: "GET",
     //             responseType: "json"})),
-    //         map(users => {
-    //             let respUsers = users.response as Array<any>
-    //             return respUsers.map(user => user['name']).toString()
-    //         })
+    //         pluck('response'),
+    //         map((users: Array<any>) => {
+    //             return users.map(user => user['name'])
+    //         }),
+    //         switchMap(users => from(users))
     //     )
     //
     // run(stream$);
@@ -193,11 +224,10 @@ import { addItem, run } from './../03-utils';
 // Combine these streams using zip
 (function task8() {
     const items = [1, 2, 3, 4, 5];
-    // const stream$ = zip(timer(0,2000), from(items))
+    // const stream$ = zip(from(items), timer(0,2000))
     //     .pipe(
-    //         map(([timer, intervalNum]) => {
-    //             return intervalNum
-    //         }))
+    //         map(interval => interval[0])
+    //     )
     //
     // run(stream$);
 })();
@@ -218,7 +248,7 @@ import { addItem, run } from './../03-utils';
         return pause;
     }
 
-    // const stream$ = of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+    // const stream$ = range(1, 10)
     //     .pipe(
     //         concatMap(val => of(val).pipe(delay(randomDelay(1000, 5000))))
     //     )
@@ -251,17 +281,24 @@ import { addItem, run } from './../03-utils';
 
     const fieldsStream = from(['country', 'street', 'flat']);
 
-    // const stream$ = fieldsStream
+    // const stream$ = objAddressStream
     //     .pipe(
-    //         withLatestFrom(objAddressStream),
-    //         switchMap(([field, object]) => {
-    //             let fieldObj = Object.entries(object).filter(([key]) => key === field)
-    //             return of(fieldObj)
-    //         }),
-    //         reduce(((acc, elem) => {
-    //             let key = elem[0][0]
-    //             acc[key] = elem[0][1]
+    //         switchMap(obj => pairs(obj)),
+    //         withLatestFrom(fieldsStream.pipe(reduce((acc, elem) => {
+    //             acc.push(elem)
     //             return acc
+    //         }, []))),
+    //         filter(arr => {
+    //             const [data, fields] = arr
+    //             const [key] = data
+    //             return fields.includes(key)
+    //         }),
+    //         map(arr => arr[0]),
+    //         reduce(((acc, elem) => {
+    //             return {
+    //                 ...acc,
+    //                 [elem[0]]: elem[1]
+    //             }
     //         }),{})
     //     )
     //
@@ -282,11 +319,9 @@ import { addItem, run } from './../03-utils';
 (function task11() {
     const items = [1, 2, 3, 4, 5];
 
-    // const stream$ = concat(
-    //     EMPTY.pipe(delay(2000)),
-    //     from(items).pipe(
-    //         concatMap(elem => from([elem]).pipe(delay(2000)))
-    //     )
+    // const stream$ = from(items)
+    //     .pipe(
+    //         concatMap(elem => concat(of(elem), EMPTY.pipe(delay(2000))))
     //     )
     //
     // run(stream$);
